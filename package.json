@@ -21,6 +21,17 @@
     "morgan": "^1.7.0",
     "pg": "^7.9.0",
     "rowdy-logger": "0.0.2",
-    "sequelize": "^5.3.5"
-  }
+    "sequelize": "^5.22.2"
+  },
+  "description": "To practice 1:M associations, we'll be adding comment functionality to an existing blog application.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinbad5000/express-blogpulse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/sinbad5000/express-blogpulse/issues"
+  },
+  "homepage": "https://github.com/sinbad5000/express-blogpulse#readme"
 }

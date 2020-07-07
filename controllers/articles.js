@@ -17,6 +17,17 @@ router.post('/', function(req, res) {
   })
 })
 
+router.post("/:id/comments", (req, res) => {
+  db.comment.create({
+    name: req.body.name,
+    content: req.body.content,
+    articleId: req.params.id
+  })
+  .then(comment => {
+    res.redirect(`/articles/${req.params.id}`)
+  })
+})
+
 // GET /articles/new - display form for creating new articles
 router.get('/new', function(req, res) {
   db.author.findAll()
@@ -32,7 +43,7 @@ router.get('/new', function(req, res) {
 router.get('/:id', function(req, res) {
   db.article.findOne({
     where: { id: req.params.id },
-    include: [db.author]
+    include: [db.author, db.comment]
   })
   .then(function(article) {
     if (!article) throw Error()

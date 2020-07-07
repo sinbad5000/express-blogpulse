@@ -1,8 +1,11 @@
 {
   "development": {
+    "username": "postgres",
+    "password": "sei526",
     "database": "blogpulse_dev",
     "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "user": "postgres"
   },
   "test": {
     "database": "blogpulse_test",
